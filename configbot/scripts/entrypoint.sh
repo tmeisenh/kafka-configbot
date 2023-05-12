@@ -6,6 +6,7 @@ env
 
 /usr/local/app/bin/wait.sh
 /usr/local/app/bin/topics.sh
+# /usr/local/app/bin/schemas.sh
 
 cowsay -f dragon "Everything is up"
 

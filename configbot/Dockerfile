@@ -14,6 +14,7 @@ ENV PATH="/usr/games:${PATH}"
 FROM dependencies
 
 COPY ./scripts/ /usr/local/app/bin
+COPY ./avro/ /usr/local/app/avro
 RUN chmod +x /usr/local/app/bin/*.sh
 
 ENV PATH="/usr/local/bin:${PATH}"

@@ -1,0 +1,26 @@
+{
+  "namespace": "com.indexoutofbounds.kafka.avro.model",
+  "type": "record",
+  "name": "Student",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "name": "courses",
+      "type": {
+        "type": "array",
+        "items": "com.indexoutofbounds.kafka.avro.model.Course"
+      }
+    }
+  ]
+}

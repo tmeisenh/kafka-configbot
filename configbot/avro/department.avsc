@@ -1,0 +1,11 @@
+{
+  "namespace": "com.indexoutofbounds.kafka.avro.model",
+  "type": "record",
+  "name": "Department",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": {
+    "namespace": "com.indexoutofbounds.kafka.avro.model",
+    "type": "record",
+    "name": "Course",
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "department",
+        "type": "com.indexoutofbounds.kafka.avro.model.Department"
+      }
+    ]
+  },
+  "schemaType":"AVRO",
+  "references": [
+    {
+      "name": "com.indexoutofbounds.kafka.avro.model.Department",
+      "subject": "department",
+      "version": 1
+    }
+  ]
+}
