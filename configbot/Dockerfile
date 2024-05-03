@@ -1,10 +1,10 @@
 FROM confluentinc/cp-base-new as confluent-tools
 
 USER root
-RUN curl -O https://packages.confluent.io/archive/7.4/confluent-7.4.0.tar.gz
-RUN tar xzf confluent-7.4.0.tar.gz
-RUN mv confluent-7.4.0 /usr/local/
-ENV PATH="/usr/local/confluent-7.4.0/bin:${PATH}"
+RUN curl -O https://packages.confluent.io/archive/7.6/confluent-7.6.1.tar.gz
+RUN tar xzf confluent-7.6.1.tar.gz
+RUN mv confluent-7.6.1 /usr/local/
+ENV PATH="/usr/local/confluent-7.6.1/bin:${PATH}"
 
 FROM confluent-tools as dependencies
 RUN dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm --assumeyes
