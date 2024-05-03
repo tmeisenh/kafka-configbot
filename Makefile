@@ -13,7 +13,7 @@ clean:
 	@docker volume prune --force
 
 down:
-	@docker-compose down
+	@docker compose down
 
 up: down clean
 	@docker compose up --build
