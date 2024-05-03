@@ -14,7 +14,11 @@ ENV PATH="/usr/games:${PATH}"
 FROM dependencies
 
 COPY ./scripts/ /usr/local/app/bin
-RUN chmod +x /usr/local/app/bin/*.sh
+
+## Remove these, these are just examples
+COPY ./sample/ /usr/local/app/sample
+
+RUN chmod +x /usr/local/app/*/*.sh
 
 ENV PATH="/usr/local/bin:${PATH}"
 

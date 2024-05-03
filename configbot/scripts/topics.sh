@@ -2,14 +2,11 @@
 
 set -e
 
-kafka-topics --create --if-not-exists \
-	--bootstrap-server ${KAFKA_REST_BOOTSTRAP_SERVERS} \
-	--replication-factor 1 \
-	--partitions 10 \
-	--topic mytopic \
-	--config "confluent.value.schema.validation=true"
+/usr/local/app/sample/sample_topic.sh
 
 cowsay "Done creating topics, listing all topics"
-
 kafka-topics --list \
-	--bootstrap-server ${KAFKA_REST_BOOTSTRAP_SERVERS} \
+	--bootstrap-server ${KAFKA_REST_BOOTSTRAP_SERVERS}
+
+cowsay "Listing all schemas"
+curl http://schema-registry:8081/subjects --silent | jq

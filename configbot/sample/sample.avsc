@@ -1,0 +1,9 @@
+{
+  "namespace": "com.indexoutofbounds.configbot.example.sample",
+  "type": "record",
+  "name": "SampleSchema",
+  "fields": [
+    { "type": "string", "name": "id" },
+    { "type": "string", "name": "description" }
+  ]
+}
